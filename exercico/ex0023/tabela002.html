@@ -11,138 +11,167 @@
         table{
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
         td, th{
             border: 1px solid black;
             padding: 10px;
         }
-        thead{
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgb(222, 218, 218);
+        }
+        thead, tfoot{
             background-color: gray;
             color: white;
         }
+        thead > tr > th{
+          position: sticky;
+           top: -1px;
+           background-color:gray ;
+        }
+        tbody > tr:nth-child(2n){
+background-color: lightgray;
+        }
+        td.num{
+            text-align: right;
+        }
+
     </style>
 </head>
 <body>
     <h1>Uso de tabelas grandes</h1>
     <table>
+    <caption>
+        População das unidades federativas
+    </caption>    
         <thead>
 <tr>
-    <th>Estado</th>
-    <th>População</th>
+    <th scope="col">Estado</th>
+    <th scope="col" style="width: 50px;">População</th>
 </tr>
-        </thead>
-        <tbody>
+</thead>
+<tfoot>
+    <tr>
+        <th scope="row">Total de habitantes</th>
+        <td class="num"><strong>203 062 512</strong></td>
+    </tr>
+</tfoot>
+<tbody>
 <td>São Paulo</td>
-<td>45 919 049</td>
+<td class="num">45 919 049</td>
 <tr>
 <td>Minas Gerais</td>
-<td>21 168 791</td>
+<td class="num">21 168 791</td>
 <tr>
     <td>Rio de Janeiro</td>
-    <td>17 264 943</td>
+    <td class="num">17 264 943</td>
 </tr>
 <tr>
     <td>Bahia</td>
-    <td>14 141 626</td>
+    <td class="num">14 141 626</td>
 </tr>
 <tr>
     <td>Paraná</td>
-    <td>11 444 380</td>
+    <td class="num">11 444 380</td>
 </tr>
 <tr>
     <td>Rio Grande do Sul</td>
-    <td>10 882 965</td>
+    <td class="num">10 882 965</td>
 </tr>
 <tr>
     <td>Pernambuco</td>
-    <td>9 058 931</td>
+    <td class="num">9 058 931</td>
 </tr>
 <tr>
     <td>Ceará</td>
-    <td>8 794 957</td>
+    <td class="num">8 794 957</td>
 </tr>
 <tr>
     <td>Pará</td>
-    <td>8 121 025</td>
+    <td class="num">8 121 025</td>
 </tr>
 <tr>
     <td>Santa Catarina</td>
-    <td>7 610 361</td>
+    <td class="num">7 610 361</td>
 </tr>
 <tr>
     <td>Goiás</td>
-    <td>7 056 495</td>
+    <td class="num">7 056 495</td>
 </tr>
 <tr>
     <td>Maranhão</td>
-    <td>6 775 805</td>
+    <td class="num">6 775 805</td>
 </tr>
 <tr>
     <td>Paraiba</td>
-    <td>3 974 687</td>
+    <td class="num">3 974 687</td>
 </tr>
 <tr>
     <td>Amazonas</td>
-    <td>3 941 613</td>
+    <td class="num">3 941 613</td>
 </tr>
 <tr>
     <td>Espirito Santo</td>
-    <td>3 833 712	</td>
+    <td class="num">3 833 712	</td>
 </tr>
 <tr>
     <td>Mato Grosso</td>
-    <td>3 658 649	</td>
+    <td class="num">3 658 649	</td>
 </tr>
 <tr>
     <td>Rio Grande do Norte</td>
-    <td>3 302 729</td>
+    <td class="num">3 302 729</td>
 </tr>
 <tr>
     <td>Piauí</td>
-    <td>3 271 199</td>
+    <td class="num">3 271 199</td>
 </tr>
 <tr>
     <td>Alagoas</td>
-    <td>3 127 683</td>
+    <td class="num">3 127 683</td>
 </tr>
 <tr>
     <td>Distrito Federal</td>
-    <td>2 817 381</td>
+    <td class="num">2 817 381</td>
 </tr>
 <tr>
     <td>Mato Grsso do Sul</td>
-    <td>2 757 013</td>
+    <td class="num">2 757 013</td>
 </tr>
 <tr>
     <td>Sergipe</td>
-    <td>2 209 558</td>
+    <td class="num">2 209 558</td>
 </tr>
 <tr>
     <td>Rondônia</td>
-    <td>1 581 196</td>
+    <td class="num">1 581 196</td>
 </tr>
 <tr>
     <td>Tocantins</td>
-    <td>1 511 460	</td>
+    <td class="num">1 511 460	</td>
 </tr>
 <tr>
     <td>Acre</td>
-    <td>830 018</td>
+    <td class="num">830 018</td>
 </tr>
 <tr>
     <td>Amapá</td>
-    <td>733 759</td>
+    <td class="num">733 759</td>
 </tr>
 <tr>
     <td>Roraima</td>
-    <td>636 707</td>
+    <td class="num">636 707</td>
 </tr>
 </tr>
-        </tbody>
-        <tfoot>
-<th>Total de habilidades</th>
-<td>0000</td>
-        </tfoot>
-    </table>
+</tbody>
+</table>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia nisi maiores est tempore, cumque animi quasi laudantium alias aliquam? Quis exercitationem eveniet fuga debitis. Aperiam animi voluptates et dolores ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores consectetur ipsam nobis obcaecati adipisci, consequuntur neque explicabo deleniti nesciunt odio quasi quos est pariatur nisi debitis veritatis minus! At, perspiciatis?] Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit earum, quo debitis aspernatur deserunt velit in porro quam impedit minima, labore, error perspiciatis illum non nam aperiam! Expedita, asperiores aperiam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quos laboriosam, est inventore cumque a mollitia ad sit, eligendi quaerat libero in possimus perferendis hic iste commodi, necessitatibus tempore itaque!</p>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia nisi maiores est tempore, cumque animi quasi laudantium alias aliquam? Quis exercitationem eveniet fuga debitis. Aperiam animi voluptates et dolores ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores consectetur ipsam nobis obcaecati adipisci, consequuntur neque explicabo deleniti nesciunt odio quasi quos est pariatur nisi debitis veritatis minus! At, perspiciatis?] Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit earum, quo debitis aspernatur deserunt velit in porro quam impedit minima, labore, error perspiciatis illum non nam aperiam! Expedita, asperiores aperiam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quos laboriosam, est inventore cumque a mollitia ad sit, eligendi quaerat libero in possimus perferendis hic iste commodi, necessitatibus tempore itaque!</p>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia nisi maiores est tempore, cumque animi quasi laudantium alias aliquam? Quis exercitationem eveniet fuga debitis. Aperiam animi voluptates et dolores ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores consectetur ipsam nobis obcaecati adipisci, consequuntur neque explicabo deleniti nesciunt odio quasi quos est pariatur nisi debitis veritatis minus! At, perspiciatis?] Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit earum, quo debitis aspernatur deserunt velit in porro quam impedit minima, labore, error perspiciatis illum non nam aperiam! Expedita, asperiores aperiam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quos laboriosam, est inventore cumque a mollitia ad sit, eligendi quaerat libero in possimus perferendis hic iste commodi, necessitatibus tempore itaque!</p>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia nisi maiores est tempore, cumque animi quasi laudantium alias aliquam? Quis exercitationem eveniet fuga debitis. Aperiam animi voluptates et dolores ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores consectetur ipsam nobis obcaecati adipisci, consequuntur neque explicabo deleniti nesciunt odio quasi quos est pariatur nisi debitis veritatis minus! At, perspiciatis?] Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit earum, quo debitis aspernatur deserunt velit in porro quam impedit minima, labore, error perspiciatis illum non nam aperiam! Expedita, asperiores aperiam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quos laboriosam, est inventore cumque a mollitia ad sit, eligendi quaerat libero in possimus perferendis hic iste commodi, necessitatibus tempore itaque!</p>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia nisi maiores est tempore, cumque animi quasi laudantium alias aliquam? Quis exercitationem eveniet fuga debitis. Aperiam animi voluptates et dolores ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores consectetur ipsam nobis obcaecati adipisci, consequuntur neque explicabo deleniti nesciunt odio quasi quos est pariatur nisi debitis veritatis minus! At, perspiciatis?] Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit earum, quo debitis aspernatur deserunt velit in porro quam impedit minima, labore, error perspiciatis illum non nam aperiam! Expedita, asperiores aperiam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quos laboriosam, est inventore cumque a mollitia ad sit, eligendi quaerat libero in possimus perferendis hic iste commodi, necessitatibus tempore itaque!</p>
 </body>
 </html>
