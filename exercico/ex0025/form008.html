@@ -8,13 +8,13 @@
 <body>
     <h1>Exemplo de fomulario</h1>
     <form action="cadastro.php" method="get" autocomplete="on">
-            <p>
-                <label for="in1">Numero 1:</label>
-                <input type="number" name="n1" id="in1" min="0" max="50" required oninput=""
-            </p>
+                <p>
+                    <label for="in1">Numero 1:</label>
+                    <input type="number" name="n1" id="in1" min="0" max="50" required oninput="isoma.innerHTMl = Number(in1.value) + Number(in2.value)">
+                </p>
             <p>
                 <label for="in2">Numero 2:</label>
-                <input type="number" name="n2" id="in2" min="0" max="50" required>
+                <input type="number" name="n2" id="in2" min="0" max="50" requiredoninput="isoma.innerHTMl = Number(in1.value) + Number(in2.value)">
             </p>
             <p>
                 <label for="isoma">soma:</label>
